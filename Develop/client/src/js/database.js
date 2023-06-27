@@ -20,11 +20,7 @@ const initDB = async () => {
   return db; // Return the database object
 };
 
-// Function to store data in the database
-export const putDb = async (content) => {
-  const db = await initDB(); // Initialize the database
-  const tx = db.transaction('jate', 'readwrite'); // Start a transaction in 'readwrite' mode
-  const store = tx.objectStore('jate'); // Get the object store named 'jate'
+
   
  
   await store.add({ id: 1, value: content });
